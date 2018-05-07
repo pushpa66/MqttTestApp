@@ -1,5 +1,6 @@
 package com.app.androidkt.mqtt;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -8,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
@@ -74,8 +74,8 @@ public class MqttMessageService extends Service {
     }
 
     private void setMessageNotification(@NonNull String topic, @NonNull String msg) {
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this)
+        Notification.Builder mBuilder =
+                new Notification.Builder(this)
                         .setSmallIcon(R.drawable.ic_message_black_24dp)
                         .setContentTitle(topic)
                         .setContentText(msg);

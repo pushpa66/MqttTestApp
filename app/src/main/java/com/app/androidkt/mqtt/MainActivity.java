@@ -6,10 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
-
 import java.io.UnsupportedEncodingException;
 
 public class MainActivity extends AppCompatActivity {
